@@ -1,0 +1,11 @@
+name: Migrate CONTENTdm TSV Module
+description: Migrates a CONTENTdm collection TSV
+package: custom
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_source_csv
+  - unlv_image

@@ -1,0 +1,78 @@
+id: tematres_agents
+label: Import TemaTres Agents
+migration_group: authorities
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: '../data/unlv-person-group-authority-data.rdf' # Path relative to Drupal site root
+  item_selector: /rdf:RDF/skos:Concept
+  fields:
+    -
+      name: tt_uri
+      label: 'TemaTres URI'
+      selector: '@rdf:about'
+    -
+      name: pref_label
+      label: 'skos Preferred Label'
+      selector: 'skos:prefLabel'
+    -
+      name: tt_type
+      label: 'TemaTres Agent Type URI'
+      selector: 'skos:broader/@rdf:resource'
+    -
+      name: auth_uri
+      label: 'Authority URI'
+      selector: 'skos:exactMatch/skos:Concept/@rdf:about'
+    -
+      name: related_uri
+      label: 'Related Agents'
+      selector: 'skos:related/@rdf:resource'
+  ids:
+    tt_uri:
+      type: string
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    -
+      plugin: skip_on_empty
+      source: tt_type
+      method: row
+      message: 'Type not supported (no skos:broader provided).'
+    -
+      plugin: substr # Strip 'http://ld.library.unlv.edu/Agent/?tema='
+      start: 39
+      length: 4
+    -
+      plugin: static_map
+      default_value: ''
+      map:
+        '5851': person
+        '5844': corporate_body
+        '5843': corporate_body
+        '5842': person
+    - # Mapping results in empty value (probably the collection type)
+      plugin: skip_on_empty
+      method: row
+      message: 'TemaTres Agent Type is not supported.'
+  title: pref_label
+  field_uris:
+    - # Skip this field if there are no skos:exactMatch
+      plugin: skip_on_empty
+      method: process
+      source: auth_uri
+  field_relation:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: related_uri
+      message: 'No Relations found for this Agent'
+    -
+      plugin: migration_lookup
+      migration: tematres_agents
+      no_stub: true # Stubbing doesn't work so just run a migration update to get the relations on the second pass
+      # source: related_uri

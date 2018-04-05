@@ -1,0 +1,42 @@
+id: cdm_media_import
+label: Import CDM Image Media
+migration_group: test_digital
+
+migration_dependencies:
+  required:
+    - cdm_file_import
+
+source:
+  plugin: csv
+  path: '../data/source.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # No headers, 1 if there are headers
+  keys:
+    - digital_id
+  column_names: # Based on Welcome Home, Howard
+    0:
+      digital_id: 'Digital ID' # basename of the file
+
+process:
+  mid:
+    plugin: migration_lookup
+    migration: cdm_file_import
+    source: digital_id
+    no_stub: true
+
+  field_file/target_id:
+    plugin: migration_lookup
+    migration: cdm_file_import
+    source: digital_id
+    no_stub: true
+
+  field_file/display:
+    plugin: default_value
+    default_value: 1
+  field_file/description:
+    plugin: default_value
+    default_value: ''
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: image_tiff

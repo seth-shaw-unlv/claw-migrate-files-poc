@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains islandora_image.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function unlv_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the unlv_image module.
+    case 'help.page.unlv_image':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('UNLV Image') . '</p>';
+      return $output;
+
+    default:
+  }
+}

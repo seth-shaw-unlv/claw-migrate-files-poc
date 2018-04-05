@@ -1,0 +1,9 @@
+name: unlv_image
+type: module
+description: UNLV Image
+core: 8.x
+package: unlv
+dependencies:
+  - media_entity_image
+  - responsive_image
+  - islandora_image

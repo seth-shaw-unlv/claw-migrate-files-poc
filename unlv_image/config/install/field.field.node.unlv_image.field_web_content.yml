@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_web_content
+    - media_entity.bundle.web_content
+    - node.type.unlv_image
+  enforced:
+    module:
+      - unlv_image
+id: node.unlv_image.field_web_content
+field_name: field_web_content
+entity_type: node
+bundle: unlv_image
+label: Web Image
+description: 'Web copy of image for display'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      web_content: web_content
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

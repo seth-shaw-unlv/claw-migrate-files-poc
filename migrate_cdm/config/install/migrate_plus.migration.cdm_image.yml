@@ -1,0 +1,212 @@
+id: cdm_image_import
+label: Import CDM Images
+migration_group: test_digital
+
+migration_dependencies:
+  required:
+    - cdm_media_import
+    - tematres_agents # Loading authorities first allows us to look them up
+
+source:
+  plugin: csv
+  path: '../data/source.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # No headers, 1 if there are headers
+  keys:
+    - digital_id
+  column_names: # Based on Welcome Home, Howard
+    0:
+      digital_id: 'Digital ID'
+    1:
+      title: 'Title'
+    2:
+      creator_person: 'Individual Creator'
+    3:
+      creator_corp: 'Group Creator'
+    4:
+      description: 'Description'
+    5:
+      aircraft: 'Aircraft'
+    6:
+      subject_person: 'Identified Individual'
+    7:
+      subject_corp: 'Identified Group'
+    8:
+      contributor_person: 'Individual Contributor'
+    9:
+      contributor_corp: 'Group Contributor'
+    11:
+      source: 'Source'
+    12:
+      collection: 'Original Collection'
+    13:
+      date: 'Original Date'
+    14:
+      collection_subject: 'Collection Subject (FAST)'
+    15:
+      graphic_elements: 'Graphic Elements (TGM)'
+    16:
+      local_subject: 'Local subject'
+    17:
+      dc_type: 'DC Type'
+    18:
+      genre: 'Genre (TGM)'
+    19:
+      mat_language: 'Language'
+    20:
+      rights: 'Rights'
+    21:
+      digital_publisher: 'Digital Publisher'
+    22:
+      digital_collection: 'Digital Collection'
+    23:
+      conversion_specs: 'Conversion Specifications'
+    24:
+      cataloger_notes: "Cataloger's Notes"
+    25:
+      compound_object: 'Compound Object'
+    26:
+      master_creation_date: 'Master File Creation Date'
+    27:
+      master_file_creation_equip: 'Master File Creation Equipment'
+    28:
+      master_file_extent: 'Master File Extent'
+    29:
+      master_file_format: 'Master File Format'
+    30:
+      master_file_os: 'Master File Operating System'
+    31:
+      master_file_quality: 'Master File Quality'
+    32:
+      master_file_creation_software: 'Master File Creation Software'
+
+destination: # We're creating nodes, ya'll.
+  plugin: entity:node
+
+process:
+  type: # The content type of the nodes we are creating
+    plugin: default_value
+    default_value: unlv_image
+
+  # One-to-One mappings
+  field_digital_id: digital_id
+  title: title
+  field_description: description
+
+  # CREATORS
+  # Since creators can be of multiple content types we need to perform
+  # lookups for each type, assign them to a temp array, and recombine
+  # them all before assigning them to the appropriate entity reference field.
+
+  temp_creator_corp: # Temporary array of corporate_body entity refs
+    - # Account for multiple entries in a cell delimited by ;
+      plugin: explode # Note: no whitespace trimming or quoting support is provided! Be careful with leading or trailing spaces between values in your source data!
+      source: creator_corp
+      delimiter: ';'
+    -
+      plugin: entity_generate # Create the authority if not found
+      value_key: title # searching by title, cause we don't have an ID
+      bundle_key: type # limit to a specific content type (required because our destination is a temp field)
+      bundle: corporate_body # The content type we want (required because our destination is a temp field)
+      entity_type: node # required because our destination is a temp field
+      default_values:
+        type: corporate_body # the content type to use when creating an authority that doesn't yet exist
+  temp_creator_person: # same as temp_creator_corp with different values
+    -
+      plugin: explode
+      source: creator_person
+      delimiter: ';'
+    -
+      plugin: entity_generate
+      value_key: title
+      bundle_key: type
+      bundle: person
+      entity_type: node
+      default_values:
+        type: person
+  field_creator: # combine the two temp fields into one
+    -
+      plugin: get
+      source:
+        - '@temp_creator_person'
+        - '@temp_creator_corp'
+    -
+      plugin: flatten # an array of arrays to a flat array of entity refs
+
+  # SUBJECTS (similar to CREATORS above)
+  # Since subjects can be of multiple content types we need to perform
+  # lookups for each type, assign them to a temp array, and recombine
+  # them all before assigning them to the appropriate entity reference field.
+
+  temp_subjects_person:  # Temporary array of person entity refs
+    -
+      plugin: skip_on_empty # Don't bother if there aren't any values
+      source: subject_person
+      method: process # Only this field, not the whole CSV row
+    -
+      plugin: explode
+      delimiter: ';'
+    -
+      plugin: entity_generate
+      value_key: title
+      bundle_key: type
+      bundle: person
+      entity_type: node
+      default_values:
+        type: person
+  temp_subjects_corp: # Temporary array of corporate_body entity refs
+    -
+      plugin: skip_on_empty
+      source: subject_corp
+      method: process
+    -
+      plugin: explode
+      delimiter: ';'
+    -
+      plugin: entity_lookup
+      value_key: title
+      bundle: corporate_body
+      bundle_key: type
+      entity_type: node
+      default_values:
+        type: corporate_body
+  temp_subjects: # Temporary field of subjects
+    -
+      plugin: concat # Multiple CSV fields include subjects
+      delimiter: ';'
+      source:
+        - aircraft
+        - local_subject
+        - graphic_elements
+        - genre
+    -
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ';'
+    -
+      plugin: entity_generate
+      value_key: title
+      bundle: subject
+      bundle_key: type
+      entity_type: node
+      default_values:
+        type: subject
+  field_subjects: # Gather temp arrays into the destination field
+    -
+      plugin: get
+      source:
+        - '@temp_subjects_person'
+        - '@temp_subjects_corp'
+        - '@temp_subjects'
+    -
+      plugin: flatten
+
+  # Now the TIFF entity references
+  field_tiff/target_id:
+    plugin: migration_lookup
+    migration: cdm_media_import
+    source: digital_id
+    no_stub: true
+  field_tiff/alt: title
