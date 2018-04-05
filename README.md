@@ -3,9 +3,9 @@
 This repository consists of two modules:
 
 1. unlv_image: A local implementation of the Islandora Image module to include additional metadata fields.
-2. migrate_cdm: Uses the Migrate API to load Tiff masters, metadata exported from CONTENTdm, and authority records exported from [TemaTres v.2](http://www.vocabularyserver.com/)
+2. migrate_cdm: Uses the Migrate API to load Tiff masters, metadata exported from CONTENTdm, and authority records exported from [TemaTres v.2](http://www.vocabularyserver.com/). (We are hoping migrating to TemaTres 3 will give us a better export that preserves the relationships ontology we used.)
 
-*Note:* This proof-of-concept assumes that new content types will be created for each metadata profile/object type pair; ergo, this proof-of-concept includes a new content type called UNLV_image which parallel's islandora_image but adds some node entity references. However, the CLAW team is exploring alternative strategies for managing descriptive metadata which will make portions of this example out of date (hopefully soon). 
+*Note:* This proof-of-concept assumes that new content types will be created for each metadata profile/object type pair; ergo, this proof-of-concept includes a new content type called UNLV_image which parallel's islandora_image but adds some node entity references. However, the CLAW team is exploring alternative strategies for managing descriptive metadata which will make portions of this example out of date (hopefully soon).
 
 # Source Data
 
