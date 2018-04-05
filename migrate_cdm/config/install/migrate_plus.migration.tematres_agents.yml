@@ -6,7 +6,7 @@ source:
   plugin: url
   data_fetcher_plugin: file
   data_parser_plugin: xml
-  urls: '../data/unlv-person-group-authority-data.rdf' # Path relative to Drupal site root
+  urls: '../data/small-auth-set.xml' # Path relative to Drupal site root
   item_selector: /rdf:RDF/skos:Concept
   fields:
     -
