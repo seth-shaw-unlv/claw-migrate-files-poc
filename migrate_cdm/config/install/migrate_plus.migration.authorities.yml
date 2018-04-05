@@ -1,0 +1,65 @@
+id: authorities
+label: Import MADS Authorities
+migration_group: authorities
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: '../data/small-auth-set.xml' # Path relative to Drupal site root
+  item_selector: /rdf:RDF/madsrdf:PersonalName
+  fields:
+    -
+      name: uri
+      label: 'TemaTres URI'
+      selector: '@rdf:about'
+    -
+      name: pref_label
+      label: 'MADS Auth Label'
+      selector: 'madsrdf:authoritativeLabel'
+    -
+      name: type
+      label: 'Type URI'
+      selector: 'madsrdf:identifiesRWO/madsrdf:RWO/rdf:type'
+  ids:
+    uri:
+      type: string
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    -
+      plugin: skip_on_empty
+      source: type
+      method: row
+      message: 'Type not supported'
+    -
+      plugin: static_map
+      default_value: ''
+      map:
+        'http://id.loc.gov/ontologies/bibframe/Person': person
+        '5844': corporate_body
+        '5843': corporate_body
+    - # Mapping results in empty value (probably the collection type)
+      plugin: skip_on_empty
+      method: row
+      message: 'TemaTres Agent Type is not supported.'
+  title: pref_label
+  field_uris:
+    - # Skip this field if there are no skos:exactMatch
+      plugin: skip_on_empty
+      method: process
+      source: uri
+  field_relation:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: related_uri
+      message: 'No Relations found for this Agent'
+    -
+      plugin: migration_lookup
+      migration: tematres_agents
+      no_stub: true # Stubbing doesn't work so just run a migration update to get the relations on the second pass
+      # source: related_uri

@@ -13,7 +13,7 @@ source:
   header_row_count: 0 # No headers, 1 if there are headers
   keys:
     - digital_id
-  column_names: # Based on Welcome Home, Howard
+  column_names:
     0:
       digital_id: 'Digital ID' # basename of the file
 

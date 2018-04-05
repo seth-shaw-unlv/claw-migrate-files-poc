@@ -11,10 +11,10 @@ source:
     - digital_id
   constants:
     source_base_dir: '../data/images'
-    collection_alias: 'whh'
+    collection_alias: 'apollo'
     dest_base_dir: 'public://originals'
-    extension: 'tif'
-  column_names: # Based on Welcome Home, Howard
+    extension: 'tiff'
+  column_names: 
     0:
       digital_id: 'Digital ID' # basename of the file
     1:
