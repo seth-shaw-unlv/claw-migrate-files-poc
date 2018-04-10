@@ -12,7 +12,7 @@ source:
   constants:
     source_base_dir: 'data/images'
     collection_alias: 'apollo'
-    dest_base_dir: 'public://originals'
+    dest_base_dir: 'public://masters'
     extension: 'tiff'
   column_names:
     0:
