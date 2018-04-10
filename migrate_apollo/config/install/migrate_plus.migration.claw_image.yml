@@ -1,0 +1,100 @@
+id: claw_image
+label: Import CDM Images
+migration_group: test_digital
+
+migration_dependencies:
+  required:
+    - claw_media
+    # Loading authorities first allows us to look them up
+    - auth_person
+    - auth_complex
+    - auth_geographic
+    - auth_topic
+
+source:
+  plugin: csv
+  path: 'data/apollo.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # No headers, 1 if there are headers
+  keys:
+    - digital_id
+  column_names: # Based on Welcome Home, Howard
+    0:
+      digital_id: 'Digital ID'
+    1:
+      title: 'Title'
+    2:
+      description: 'Description'
+    3:
+      subject_person: 'Identified Individual'
+    4:
+      subjects: 'Subjects'
+
+destination: # We're creating nodes, ya'll.
+  plugin: entity:node
+
+process:
+  type: # The content type of the nodes we are creating
+    plugin: default_value
+    default_value: unlv_image
+
+  # One-to-One mappings
+  field_digital_id: digital_id
+  title: title
+  field_description: description
+
+  # SUBJECTS (similar to CREATORS above)
+  # Since subjects can be of multiple content types we need to perform
+  # lookups for each type, assign them to a temp array, and recombine
+  # them all before assigning them to the appropriate entity reference field.
+
+  temp_subjects_person:  # Temporary array of person entity refs
+    -
+      plugin: skip_on_empty # Don't bother if there aren't any values
+      source: subject_person
+      method: process # Only this field, not the whole CSV row
+    - # Account for multiple entries in a cell delimited by ;
+      plugin: explode # Note: no whitespace trimming or quoting support is provided! Be careful with leading or trailing spaces between values in your source data!
+      delimiter: ';'
+    -
+      plugin: entity_generate
+      value_key: title
+      bundle_key: type
+      bundle: person
+      entity_type: node
+      default_values:
+        type: person
+
+  temp_subjects: # Temporary field of subjects
+    -
+      plugin: skip_on_empty
+      source: subjects
+      method: process
+    -
+      plugin: explode
+      delimiter: ';'
+    -
+      plugin: entity_generate
+      value_key: title
+      bundle: subject
+      bundle_key: type
+      entity_type: node
+      default_values:
+        type: subject
+
+  field_subjects: # Gather temp arrays into the destination field
+    -
+      plugin: get
+      source:
+        - '@temp_subjects_person'
+        - '@temp_subjects'
+    -
+      plugin: flatten # an array of arrays to a flat array of entity refs
+
+  # Now the TIFF entity references
+  field_tiff/target_id:
+    plugin: migration_lookup
+    migration: claw_media
+    source: digital_id
+    no_stub: true
+  field_tiff/alt: title

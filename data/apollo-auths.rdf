@@ -1,0 +1,1045 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:PersonalName rdf:about="http://id.loc.gov/authorities/names/n90607162"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Armstrong, Neil</madsrdf:authoritativeLabel>
+    <madsrdf:elementList rdf:parseType="Collection">
+      <madsrdf:FullNameElement>
+        <madsrdf:elementValue xml:lang="en">Armstrong, Neil</madsrdf:elementValue>
+      </madsrdf:FullNameElement>
+    </madsrdf:elementList>
+    <madsrdf:hasVariant>
+      <madsrdf:PersonalName>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Armstrong, N. (Neil)</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:FullNameElement>
+            <madsrdf:elementValue xml:lang="en">Armstrong, N.</madsrdf:elementValue>
+          </madsrdf:FullNameElement>
+          <madsrdf:FullNameElement>
+            <madsrdf:elementValue xml:lang="en">(Neil)</madsrdf:elementValue>
+          </madsrdf:FullNameElement>
+        </madsrdf:elementList>
+      </madsrdf:PersonalName>
+    </madsrdf:hasVariant>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/names/collection_LCNAF"/>
+    <madsrdf:hasExactExternalAuthority
+      rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn+90607162#skos:Concept"/>
+    <madsrdf:identifiesRWO>
+      <madsrdf:RWO rdf:about="http://id.loc.gov/rwo/agents/n90607162">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <madsrdf:birthDate>
+          <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <rdfs:label xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">(edtf)
+              1949-01-24</rdfs:label>
+          </skos:Concept>
+        </madsrdf:birthDate>
+      </madsrdf:RWO>
+    </madsrdf:identifiesRWO>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/names"/>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">n
+      90607162</identifiers:lccn>
+    <identifiers:local xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+      >(OCoLC)oca02677763</identifiers:local>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>New directions in physical education, 1990-
+          :</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">vol. 1, CIP t.p. (Neil Armstrong) galley pref. (Ph. D.,
+          FPEA; University of Exeter, UK)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>BL AL recd., 4 Nov. 1991</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">(b. 24 Jan. 1949)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>The elite young athlete, 2011:</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">ECIP t.p. (N. Armstrong) ECIP t.p. verso (Prof. Neil
+          Armstrong, Univ. of Exeter)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1990-01-31T00:00:00</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2017-09-16T07:38:01</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Armstrong,
+      Neil</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Armstrong, N. (Neil)</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Armstrong, N.
+      (Neil)</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn+90607162#skos:Concept"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/names"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">Armstrong, N.
+      (Neil)</skosxl:altLabel>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n90607162"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1990-01-31T00:00:00</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n90607162"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2017-09-16T07:38:01</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:PersonalName>
+  <madsrdf:PersonalName rdf:about="http://id.loc.gov/authorities/names/n88245653"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Aldrin, Buzz</madsrdf:authoritativeLabel>
+    <madsrdf:elementList rdf:parseType="Collection">
+      <madsrdf:FullNameElement>
+        <madsrdf:elementValue xml:lang="en">Aldrin, Buzz</madsrdf:elementValue>
+      </madsrdf:FullNameElement>
+    </madsrdf:elementList>
+    <madsrdf:hasVariant>
+      <madsrdf:PersonalName>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Aldrin, Edwin E.</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:FullNameElement>
+            <madsrdf:elementValue xml:lang="en">Aldrin, Edwin E.</madsrdf:elementValue>
+          </madsrdf:FullNameElement>
+        </madsrdf:elementList>
+      </madsrdf:PersonalName>
+    </madsrdf:hasVariant>
+    <madsrdf:hasVariant>
+      <madsrdf:PersonalName>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Aldrin, Edwin Eugene, Jr.</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:FullNameElement>
+            <madsrdf:elementValue xml:lang="en">Aldrin, Edwin Eugene,</madsrdf:elementValue>
+          </madsrdf:FullNameElement>
+          <madsrdf:TermsOfAddressNameElement>
+            <madsrdf:elementValue xml:lang="en">Jr.</madsrdf:elementValue>
+          </madsrdf:TermsOfAddressNameElement>
+        </madsrdf:elementList>
+      </madsrdf:PersonalName>
+    </madsrdf:hasVariant>
+    <madsrdf:classification>PS3551.L3454</madsrdf:classification>
+    <madsrdf:hasRelatedAuthority>
+      <madsrdf:CorporateName rdf:about="http://id.loc.gov/authorities/names/n79129542">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">Apollo 11
+          (Spacecraft)</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:NameElement>
+            <madsrdf:elementValue xml:lang="en">Apollo 11 (Spacecraft)</madsrdf:elementValue>
+          </madsrdf:NameElement>
+        </madsrdf:elementList>
+      </madsrdf:CorporateName>
+    </madsrdf:hasRelatedAuthority>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/names/collection_LCNAF"/>
+    <madsrdf:hasExactExternalAuthority
+      rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn+88245653#skos:Concept"/>
+    <madsrdf:identifiesRWO>
+      <madsrdf:RWO rdf:about="http://id.loc.gov/rwo/agents/n88245653">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <madsrdf:birthDate>
+          <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <rdfs:label xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">(edtf)
+              1930-01-20</rdfs:label>
+          </skos:Concept>
+        </madsrdf:birthDate>
+        <madsrdf:hasAffiliation>
+          <madsrdf:Affiliation>
+            <madsrdf:affiliationEnd>1972-03</madsrdf:affiliationEnd>
+            <madsrdf:organization>
+              <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/n79126811">
+                <madsrdf:authoritativeLabel>United States. Air Force</madsrdf:authoritativeLabel>
+              </madsrdf:Organization>
+            </madsrdf:organization>
+          </madsrdf:Affiliation>
+        </madsrdf:hasAffiliation>
+        <madsrdf:hasAffiliation>
+          <madsrdf:Affiliation>
+            <madsrdf:affiliationStart>1963-10</madsrdf:affiliationStart>
+            <madsrdf:affiliationEnd>1971-07</madsrdf:affiliationEnd>
+            <madsrdf:organization>
+              <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/n78087581">
+                <madsrdf:authoritativeLabel>United States. National Aeronautics and Space
+                  Administration</madsrdf:authoritativeLabel>
+              </madsrdf:Organization>
+            </madsrdf:organization>
+          </madsrdf:Affiliation>
+        </madsrdf:hasAffiliation>
+        <madsrdf:hasAffiliation>
+          <madsrdf:Affiliation>
+            <madsrdf:organization>
+              <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/no93003119">
+                <madsrdf:authoritativeLabel>United States. Air Force. Systems Command. Space Systems
+                  Division</madsrdf:authoritativeLabel>
+              </madsrdf:Organization>
+            </madsrdf:organization>
+          </madsrdf:Affiliation>
+        </madsrdf:hasAffiliation>
+        <madsrdf:hasAffiliation>
+          <madsrdf:Affiliation>
+            <madsrdf:organization>
+              <madsrdf:Organization rdf:about="http://id.loc.gov/authorities/names/no2012156616">
+                <madsrdf:authoritativeLabel>United States. Air Force. Test Pilot
+                  School</madsrdf:authoritativeLabel>
+              </madsrdf:Organization>
+            </madsrdf:organization>
+          </madsrdf:Affiliation>
+        </madsrdf:hasAffiliation>
+        <madsrdf:birthPlace>
+          <madsrdf:Geographic rdf:about="http://id.loc.gov/authorities/names/n79060426">
+            <madsrdf:authoritativeLabel>Montclair (N.J.)</madsrdf:authoritativeLabel>
+          </madsrdf:Geographic>
+        </madsrdf:birthPlace>
+        <madsrdf:associatedLocale>
+          <madsrdf:Geographic rdf:about="http://id.loc.gov/authorities/names/n78095330">
+            <madsrdf:authoritativeLabel>United States</madsrdf:authoritativeLabel>
+          </madsrdf:Geographic>
+        </madsrdf:associatedLocale>
+        <madsrdf:fieldOfActivity>
+          <skos:Concept rdf:about="http://id.loc.gov/authorities/subjects/sh85125999"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <madsrdf:authoritativeLabel>Space vehicles--Piloting</madsrdf:authoritativeLabel>
+          </skos:Concept>
+        </madsrdf:fieldOfActivity>
+        <madsrdf:occupation>
+          <madsrdf:Occupation rdf:about="http://id.loc.gov/authorities/subjects/sh85008988">
+            <madsrdf:authoritativeLabel>Astronauts</madsrdf:authoritativeLabel>
+          </madsrdf:Occupation>
+        </madsrdf:occupation>
+        <madsrdf:occupation>
+          <madsrdf:Occupation rdf:about="http://id.loc.gov/authorities/subjects/sh88001895">
+            <madsrdf:authoritativeLabel>Test pilots</madsrdf:authoritativeLabel>
+          </madsrdf:Occupation>
+        </madsrdf:occupation>
+        <madsrdf:occupation>
+          <madsrdf:Occupation>
+            <rdfs:label xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">Lunar module
+              pilot</rdfs:label>
+          </madsrdf:Occupation>
+        </madsrdf:occupation>
+        <madsrdf:gender>
+          <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <rdfs:label xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">male</rdfs:label>
+          </skos:Concept>
+        </madsrdf:gender>
+        <madsrdf:gender>
+          <skos:Concept rdf:about="http://id.loc.gov/authorities/demographicTerms/dg2015060003"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <madsrdf:authoritativeLabel>Males</madsrdf:authoritativeLabel>
+          </skos:Concept>
+        </madsrdf:gender>
+        <madsrdf:associatedLanguage>
+          <madsrdf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng">
+            <madsrdf:code>eng</madsrdf:code>
+          </madsrdf:Language>
+        </madsrdf:associatedLanguage>
+      </madsrdf:RWO>
+    </madsrdf:identifiesRWO>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/names"/>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">n
+      88245653</identifiers:lccn>
+    <identifiers:local xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+      >(OCoLC)oca02455093</identifiers:local>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>His Men from earth, 1989:</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">CIP t.p. (Buzz Aldrin)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>LC data base, 11/1/89</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">(Aldrin, Edwin E., 1930- )</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>The First lunar landing, 1989:</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">p. 3 of cover (Edwin E. (Buzz) Aldrin,
+          Jr.)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>National Aeronautics and Space Administration Astronaut
+          Biographies, via WWW, July 12, 2013</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">(Buzz Aldrin, Ph. D. (Colonel, USAF, Ret.); NASA
+          Astronaut (Former); born January 20, 1930 in Montclair, New Jersey; received a bachelor of
+          science degree in 1951 from the United States Military Academy at West Point, New York,
+          graduating third in his class, and a doctorate of science in Astronautics from
+          Massachusetts Institute of Technology, Cambridge; Aldrin was one of the third group of
+          astronauts named by NASA in October 1963; on November 11, 1966, he and command pilot James
+          Lovell were launched into space in the Gemini 12 spacecraft on a 4-day flight, which
+          brought the Gemini program to a successful close; he served as lunar module pilot for
+          Apollo 11, July 16-24, 1969, the first manned lunar landing mission; Aldrin followed Neil
+          Armstrong onto the lunar surface on July 20, 1969; in July 1971, Aldrin resigned from
+          NASA; prior to joining NASA, Aldrin flew 66 combat missions in F-86s while on duty in
+          Korea; at Nellis Air Force Base, Nevada, he served as an aerial gunnery instructor;
+          following his assignment as aide to the dean of faculty at the Air Force Academy, Aldrin
+          flew F-100s as a flight commander at Bitburg, Germany; he went on to receive a doctorate
+          at MIT, and was then assigned to the Gemini Target Office of the Air Force Space Systems
+          Division, Los Angeles; in March 1972, Aldrin retired from Air Force active duty, after 21
+          years of service; since retiring from NASA, the Air Force, and his position as commander
+          of the USAF Test Pilot School at Edwards Air Force Base in 1972, he authored an
+          autobiography, Return to Earth; Aldrin has remained at the forefront of efforts to ensure
+          a continued leading role for America in manned space exploration to advance his life-long
+          commitment to venturing outward in space)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:hasSource>
+      <madsrdf:Source>
+        <madsrdf:citation-source>Wikipedia, July 12, 2013</madsrdf:citation-source>
+        <madsrdf:citation-note xml:lang="en">(Buzz Aldrin; born Edwin Eugene Aldrin, Jr. on January
+          20, 1930; American astronaut, and the second person to walk on the Moon; he was the lunar
+          module pilot on Apollo 11, the first manned lunar landing in history; on July 21, 1969, he
+          set foot on the Moon, following mission commander Neil Armstrong; he is also a retired
+          United States Air Force pilot)</madsrdf:citation-note>
+        <madsrdf:citation-status>found</madsrdf:citation-status>
+      </madsrdf:Source>
+    </madsrdf:hasSource>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1989-02-08T00:00:00</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2016-01-20T07:37:37</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <ri:languageOfCataloging rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Aldrin,
+      Buzz</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Aldrin, Edwin E.</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Aldrin, Edwin
+      E.</skos:altLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Aldrin, Edwin Eugene, Jr.</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Aldrin, Edwin Eugene,
+      Jr.</skos:altLabel>
+    <skos:semanticRelation xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/names/n79129542">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Apollo 11 (Spacecraft)</skos:prefLabel>
+      </rdf:Description>
+    </skos:semanticRelation>
+    <skos:exactMatch rdf:resource="http://viaf.org/viaf/sourceID/LC%7Cn+88245653#skos:Concept"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/names"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">Aldrin, Edwin
+      E.</skosxl:altLabel>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">Aldrin, Edwin
+      Eugene, Jr.</skosxl:altLabel>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n88245653"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1989-02-08T00:00:00</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/names/n88245653"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2016-01-20T07:37:37</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:PersonalName>
+  <madsrdf:ComplexSubject rdf:about="http://id.loc.gov/authorities/subjects/sh85048972"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Flags--United States</madsrdf:authoritativeLabel>
+    <madsrdf:componentList rdf:parseType="Collection">
+      <madsrdf:Topic rdf:about="http://id.loc.gov/authorities/childrensSubjects/sj96005518">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">Flags</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Flags</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+      <madsrdf:Geographic rdf:about="http://id.loc.gov/authorities/names/n78095330">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">United States</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:GeographicElement>
+            <madsrdf:elementValue xml:lang="en">United States</madsrdf:elementValue>
+          </madsrdf:GeographicElement>
+        </madsrdf:elementList>
+      </madsrdf:Geographic>
+    </madsrdf:componentList>
+    <madsrdf:hasVariant>
+      <madsrdf:ComplexSubject>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">United States--Flags</madsrdf:variantLabel>
+        <madsrdf:componentList rdf:parseType="Collection">
+          <madsrdf:Geographic>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+            <madsrdf:variantLabel xml:lang="en">United States</madsrdf:variantLabel>
+            <madsrdf:elementList rdf:parseType="Collection">
+              <madsrdf:GeographicElement>
+                <madsrdf:elementValue xml:lang="en">United States</madsrdf:elementValue>
+              </madsrdf:GeographicElement>
+            </madsrdf:elementList>
+          </madsrdf:Geographic>
+          <madsrdf:Topic>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+            <madsrdf:variantLabel xml:lang="en">Flags</madsrdf:variantLabel>
+            <madsrdf:elementList rdf:parseType="Collection">
+              <madsrdf:TopicElement>
+                <madsrdf:elementValue xml:lang="en">Flags</madsrdf:elementValue>
+              </madsrdf:TopicElement>
+            </madsrdf:elementList>
+          </madsrdf:Topic>
+        </madsrdf:componentList>
+      </madsrdf:ComplexSubject>
+    </madsrdf:hasVariant>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85140634">
+        <madsrdf:authoritativeLabel xml:lang="en">United States.
+          Army--Flags</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85140916">
+        <madsrdf:authoritativeLabel xml:lang="en">United States.
+          Navy--Flags</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85140233">
+        <madsrdf:authoritativeLabel xml:lang="en">United States--History--Civil War,
+          1861-1865--Flags</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasReciprocalAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/childrensSubjects/sj96006312">
+        <madsrdf:authoritativeLabel xml:lang="en">Pledge of Allegiance</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasReciprocalAuthority>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSH_General"/>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">sh
+      85048972</identifiers:lccn>
+    <owl:sameAs rdf:resource="info:lc/authorities/sh85048972"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <owl:sameAs rdf:resource="http://id.loc.gov/authorities/sh85048972#concept"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2011-04-29T07:55:13</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Flags--United
+      States</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">United States--Flags</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">United
+      States--Flags</skos:altLabel>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85140634">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">United States. Army--Flags</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85140916">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">United States. Navy--Flags</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85140233">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">United States--History--Civil War,
+          1861-1865--Flags</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:related xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/childrensSubjects/sj96006312">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Pledge of Allegiance</skos:prefLabel>
+      </rdf:Description>
+    </skos:related>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">United
+      States--Flags</skosxl:altLabel>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85048972"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85048972"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2011-04-29T07:55:13</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:ComplexSubject>
+  <madsrdf:Geographic rdf:about="http://id.loc.gov/authorities/subjects/sh85087107"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Moon</madsrdf:authoritativeLabel>
+    <madsrdf:elementList rdf:parseType="Collection">
+      <madsrdf:GeographicElement>
+        <madsrdf:elementValue xml:lang="en">Moon</madsrdf:elementValue>
+      </madsrdf:GeographicElement>
+    </madsrdf:elementList>
+    <madsrdf:hasVariant>
+      <madsrdf:ComplexSubject>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Earth (Planet)--Satellite</madsrdf:variantLabel>
+        <madsrdf:componentList rdf:parseType="Collection">
+          <madsrdf:Geographic>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+            <madsrdf:variantLabel xml:lang="en">Earth (Planet)</madsrdf:variantLabel>
+            <madsrdf:elementList rdf:parseType="Collection">
+              <madsrdf:GeographicElement>
+                <madsrdf:elementValue xml:lang="en">Earth (Planet)</madsrdf:elementValue>
+              </madsrdf:GeographicElement>
+            </madsrdf:elementList>
+          </madsrdf:Geographic>
+          <madsrdf:Topic>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+            <madsrdf:variantLabel xml:lang="en">Satellite</madsrdf:variantLabel>
+            <madsrdf:elementList rdf:parseType="Collection">
+              <madsrdf:TopicElement>
+                <madsrdf:elementValue xml:lang="en">Satellite</madsrdf:elementValue>
+              </madsrdf:TopicElement>
+            </madsrdf:elementList>
+          </madsrdf:Topic>
+        </madsrdf:componentList>
+      </madsrdf:ComplexSubject>
+    </madsrdf:hasVariant>
+    <madsrdf:hasVariant>
+      <madsrdf:Topic>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Selenology</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Selenology</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasVariant>
+    <madsrdf:classification>QB580-QB595</madsrdf:classification>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85125931">
+        <madsrdf:authoritativeLabel xml:lang="en">Space flight to the
+          moon</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85103003">
+        <madsrdf:authoritativeLabel xml:lang="en">Plants--Effect of the moon
+          on</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasReciprocalAuthority>
+      <madsrdf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh2008004007">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">Lunar transient
+          phenomena</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Lunar transient phenomena</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasReciprocalAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh00002907">
+        <madsrdf:authoritativeLabel xml:lang="en">Mare Orientale (Moon)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85145847">
+        <madsrdf:authoritativeLabel xml:lang="en">Weather--Effect of the moon
+          on</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="http://data.bnf.fr/ark:/12148/cb137364379">
+        <madsrdf:authoritativeLabel xml:lang="fr">Moon</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh00002913">
+        <madsrdf:authoritativeLabel xml:lang="en">Rima Hadley (Moon)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85136863">
+        <madsrdf:authoritativeLabel xml:lang="en">Tranquility Base
+          (Moon)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="http://data.bnf.fr/ark:/12148/cb119358377">
+        <madsrdf:authoritativeLabel xml:lang="fr">Lune</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:hasBroaderAuthority>
+      <madsrdf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh85117635">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">Satellites</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Satellites</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasBroaderAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85078859">
+        <madsrdf:authoritativeLabel xml:lang="en">Lunar limb</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85087121">
+        <madsrdf:authoritativeLabel xml:lang="en">Human beings--Effect of the moon
+          on</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85119703">
+        <madsrdf:authoritativeLabel xml:lang="en">Selenodesy</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85122936">
+        <madsrdf:authoritativeLabel xml:lang="en">Sinus Medii (Moon)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasNarrowerAuthority>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/authorities/subjects/sh85124729">
+        <madsrdf:authoritativeLabel xml:lang="en">Solunar theory</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasNarrowerAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="http://d-nb.info/gnd/4040037-2">
+        <madsrdf:authoritativeLabel xml:lang="de">Mond</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSH_General"/>
+    <madsrdf:identifiesRWO>
+      <madsrdf:RWO rdf:about="http://id.loc.gov/rwo/agents/sh85087107">
+        <rdf:type rdf:resource="http://www.loc.gov/standards/mads/rdf/v1#Geographic"/>
+      </madsrdf:RWO>
+    </madsrdf:identifiesRWO>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+    <madsrdf:editorialNote>[This heading is not valid for use as a geographic subdivision, except
+      where specifically established.]</madsrdf:editorialNote>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">sh
+      85087107</identifiers:lccn>
+    <owl:sameAs rdf:resource="info:lc/authorities/sh85087107"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <owl:sameAs rdf:resource="http://id.loc.gov/authorities/sh85087107#concept"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2013-03-13T10:37:44</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+      >Moon</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Earth (Planet)--Satellite</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Earth
+      (Planet)--Satellite</skos:altLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Selenology</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Selenology</skos:altLabel>
+    <skos:broader xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85117635">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Satellites</skos:prefLabel>
+      </rdf:Description>
+    </skos:broader>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85125931">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Space flight to the moon</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85103003">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Plants--Effect of the moon on</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh00002907">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Mare Orientale (Moon)</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85145847">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Weather--Effect of the moon on</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh00002913">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Rima Hadley (Moon)</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85136863">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Tranquility Base (Moon)</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85078859">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Lunar limb</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85087121">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Human beings--Effect of the moon on</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85119703">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Selenodesy</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85122936">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Sinus Medii (Moon)</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:narrower xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85124729">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Solunar theory</skos:prefLabel>
+      </rdf:Description>
+    </skos:narrower>
+    <skos:related xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh2008004007">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Lunar transient phenomena</skos:prefLabel>
+      </rdf:Description>
+    </skos:related>
+    <skos:closeMatch xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://data.bnf.fr/ark:/12148/cb137364379">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="fr">Moon</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:closeMatch xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://data.bnf.fr/ark:/12148/cb119358377">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="fr">Lune</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:closeMatch xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://d-nb.info/gnd/4040037-2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="de">Mond</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:editorial xmlns:skos="http://www.w3.org/2004/02/skos/core#">[This heading is not valid for
+      use as a geographic subdivision, except where specifically established.]</skos:editorial>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">Earth
+      (Planet)--Satellite</skosxl:altLabel>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+      >Selenology</skosxl:altLabel>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85087107"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85087107"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2013-03-13T10:37:44</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:Geographic>
+  <madsrdf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh85078854"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Lunar excursion module</madsrdf:authoritativeLabel>
+    <madsrdf:elementList rdf:parseType="Collection">
+      <madsrdf:TopicElement>
+        <madsrdf:elementValue xml:lang="en">Lunar excursion module</madsrdf:elementValue>
+      </madsrdf:TopicElement>
+    </madsrdf:elementList>
+    <madsrdf:hasVariant>
+      <madsrdf:Topic>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">LEM (Lunar excursion module)</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">LEM (Lunar excursion module)</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasVariant>
+    <madsrdf:hasVariant>
+      <madsrdf:Topic>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
+        <madsrdf:variantLabel xml:lang="en">Lunar module</madsrdf:variantLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Lunar module</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasVariant>
+    <madsrdf:hasBroaderAuthority>
+      <madsrdf:Topic rdf:about="http://id.loc.gov/authorities/subjects/sh85125971">
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <madsrdf:authoritativeLabel xml:lang="en">Space vehicles</madsrdf:authoritativeLabel>
+        <madsrdf:elementList rdf:parseType="Collection">
+          <madsrdf:TopicElement>
+            <madsrdf:elementValue xml:lang="en">Space vehicles</madsrdf:elementValue>
+          </madsrdf:TopicElement>
+        </madsrdf:elementList>
+      </madsrdf:Topic>
+    </madsrdf:hasBroaderAuthority>
+    <madsrdf:hasCloseExternalAuthority>
+      <madsrdf:Authority rdf:about="http://data.bnf.fr/ark:/12148/cb11978632h">
+        <madsrdf:authoritativeLabel xml:lang="fr">Module lunaire</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasCloseExternalAuthority>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"/>
+    <madsrdf:isMemberOfMADSCollection
+      rdf:resource="http://id.loc.gov/authorities/subjects/collection_LCSH_General"/>
+    <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+    <identifiers:lccn xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/">sh
+      85078854</identifiers:lccn>
+    <owl:sameAs rdf:resource="info:lc/authorities/sh85078854"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <owl:sameAs rdf:resource="http://id.loc.gov/authorities/sh85078854#concept"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2011-06-03T07:59:10</ri:recordChangeDate>
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</ri:recordStatus>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Lunar excursion
+      module</skos:prefLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">LEM (Lunar excursion module)</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">LEM (Lunar excursion
+      module)</skos:altLabel>
+    <skosxl:altLabel xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">
+      <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skosxl:literalForm xml:lang="en">Lunar module</skosxl:literalForm>
+      </rdf:Description>
+    </skosxl:altLabel>
+    <skos:altLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Lunar module</skos:altLabel>
+    <skos:broader xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/authorities/subjects/sh85125971">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Space vehicles</skos:prefLabel>
+      </rdf:Description>
+    </skos:broader>
+    <skos:closeMatch xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://data.bnf.fr/ark:/12148/cb11978632h">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="fr">Module lunaire</skos:prefLabel>
+      </rdf:Description>
+    </skos:closeMatch>
+    <skos:inScheme rdf:resource="http://id.loc.gov/authorities/subjects"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">LEM (Lunar
+      excursion module)</skosxl:altLabel>
+    <skosxl:altLabel xml:lang="en" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#">Lunar
+      module</skosxl:altLabel>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85078854"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >1986-02-11T00:00:00</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+        <cs:subjectOfChange rdf:resource="http://id.loc.gov/authorities/subjects/sh85078854"/>
+        <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+        <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+          >2011-06-03T07:59:10</cs:createdDate>
+        <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >revised</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:Topic>
+</rdf:RDF>

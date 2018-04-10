@@ -1,0 +1,42 @@
+id: claw_media
+label: Import CDM Image Media
+migration_group: test_digital
+
+migration_dependencies:
+  required:
+    - claw_file
+
+source:
+  plugin: csv
+  path: 'data/apollo.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # No headers, 1 if there are headers
+  keys:
+    - digital_id
+  column_names:
+    0:
+      digital_id: 'Digital ID' # basename of the file
+
+process:
+  mid:
+    plugin: migration_lookup
+    migration: claw_file
+    source: digital_id
+    no_stub: true
+
+  field_file/target_id:
+    plugin: migration_lookup
+    migration: claw_file
+    source: digital_id
+    no_stub: true
+
+  field_file/display:
+    plugin: default_value
+    default_value: 1
+  field_file/description:
+    plugin: default_value
+    default_value: ''
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: image_tiff

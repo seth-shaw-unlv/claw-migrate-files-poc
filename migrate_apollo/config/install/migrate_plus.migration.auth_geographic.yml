@@ -1,0 +1,41 @@
+id: auth_geographic
+label: Import MADS Geographic Authorities
+migration_group: authorities
+
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: 'data/apollo-auths.rdf' # Path relative to Drupal site root
+  item_selector: /rdf:RDF/madsrdf:Geographic
+  fields:
+    -
+      name: uri
+      label: 'URI'
+      selector: '@rdf:about'
+    -
+      name: pref_label
+      label: 'MADS Auth Label'
+      selector: 'madsrdf:authoritativeLabel'
+    -
+      name: ref_uri
+      label: "External Authority"
+      selector: 'skos:exactMatch/@rdf:resource'
+
+  ids:
+    uri:
+      type: string
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    plugin: default_value
+    default_value: subject
+  title: pref_label
+  field_uris:
+    - # Skip this field if there are no skos:exactMatch
+      plugin: skip_on_empty
+      method: process
+      source: ref_uri
