@@ -18,6 +18,8 @@ source:
   header_row_count: 0 # No headers, 1 if there are headers
   keys:
     - digital_id
+  constants:
+    collection_alias: 'apollo'
   column_names: # Based on Welcome Home, Howard
     0:
       digital_id: 'Digital ID'
@@ -42,6 +44,14 @@ process:
   field_digital_id: digital_id
   title: title
   field_description: description
+
+  path: # Path Alias
+    plugin: concat
+    delimiter: '/'
+    source:
+      - '' # Gives us a '/' prefix for the server root
+      - constants/collection_alias
+      - digital_id
 
   # SUBJECTS (similar to CREATORS above)
   # Since subjects can be of multiple content types we need to perform
