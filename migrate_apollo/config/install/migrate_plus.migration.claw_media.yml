@@ -1,14 +1,14 @@
-id: cdm_media_import
+id: claw_media
 label: Import CDM Image Media
 migration_group: test_digital
 
 migration_dependencies:
   required:
-    - cdm_file_import
+    - claw_file
 
 source:
   plugin: csv
-  path: '../data/source.csv' # Path relative to Drupal site root
+  path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
   header_row_count: 0 # No headers, 1 if there are headers
   keys:
@@ -20,13 +20,13 @@ source:
 process:
   mid:
     plugin: migration_lookup
-    migration: cdm_file_import
+    migration: claw_file
     source: digital_id
     no_stub: true
 
   field_file/target_id:
     plugin: migration_lookup
-    migration: cdm_file_import
+    migration: claw_file
     source: digital_id
     no_stub: true
 

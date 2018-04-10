@@ -1,20 +1,20 @@
-id: cdm_file_import
-label: Import CDM Image Files
+id: claw_file
+label: Import Image Files
 migration_group: test_digital
 
 source:
   plugin: csv
-  path: '../data/source.csv' # Path relative to Drupal site root
+  path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
   header_row_count: 0 # No headers, 1 if there are headers
   keys:
     - digital_id
   constants:
-    source_base_dir: '../data/images'
+    source_base_dir: 'data/images'
     collection_alias: 'apollo'
     dest_base_dir: 'public://originals'
     extension: 'tiff'
-  column_names: 
+  column_names:
     0:
       digital_id: 'Digital ID' # basename of the file
     1:

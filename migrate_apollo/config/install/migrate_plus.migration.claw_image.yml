@@ -1,15 +1,19 @@
-id: cdm_image_import
+id: claw_image
 label: Import CDM Images
 migration_group: test_digital
 
 migration_dependencies:
   required:
-    - cdm_media_import
-    - authorities # Loading authorities first allows us to look them up
+    - claw_media
+    # Loading authorities first allows us to look them up
+    - auth_person
+    - auth_complex
+    - auth_geographic
+    - auth_topic
 
 source:
   plugin: csv
-  path: '../data/source.csv' # Path relative to Drupal site root
+  path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
   header_row_count: 0 # No headers, 1 if there are headers
   keys:
@@ -63,11 +67,8 @@ process:
 
   temp_subjects: # Temporary field of subjects
     -
-      plugin: concat # Multiple CSV fields include subjects
-      delimiter: ';'
-      source: subjects
-    -
       plugin: skip_on_empty
+      source: subjects
       method: process
     -
       plugin: explode
@@ -80,6 +81,7 @@ process:
       entity_type: node
       default_values:
         type: subject
+
   field_subjects: # Gather temp arrays into the destination field
     -
       plugin: get
@@ -92,7 +94,7 @@ process:
   # Now the TIFF entity references
   field_tiff/target_id:
     plugin: migration_lookup
-    migration: cdm_media_import
+    migration: claw_media
     source: digital_id
     no_stub: true
   field_tiff/alt: title

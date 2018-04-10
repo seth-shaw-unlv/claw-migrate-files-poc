@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.subject_images
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__subject_images_block_1
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:subject_images-block_1'
+settings:
+  id: 'views_block:subject_images-block_1'
+  label: Images
+  provider: views
+  label_display: visible
+  views_label: Images
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      person: person
+      subject: subject
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

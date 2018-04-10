@@ -1,7 +1,5 @@
 # Proof of Concept: CLAW Migrate Files (Apollo Edition)
 
-**STILL UNDER CONSTRUCTION**
-
 This repository consists of two modules:
 
 1. unlv_image: A local implementation of the Islandora Image module to include additional metadata fields.
@@ -15,10 +13,10 @@ The source data used for this proof of concept came from the [Project Apollo Arc
 
 # Running
 
-Note: using drush with migrate_tools is optional, but the instructions assumes it is enabled
+Note: using drush with migrate_tools is optional, but the instructions assume it is installed.
 
-1. Copy the migrate_cdm and unlv_image directories to your modules directory
-2. Copy the data directory to the directory containing your drupal root (drupal root and the data directory will be parallel.)
-3. Enable the modules. E.g. `drush en -y migrate_cdm`
-4. Migrate the authorities. E.g. `drush mim tematres_agents`
-5. Migrate the images. E.g. `drush mim --all` (Migrate will automatically skip any authorities in tematres_agents we already migrated.)
+1. Copy the data directory to your drupal web root (e.g. in my tests the drupal web root is `/var/www/drupalvm/drupal/web` and the data directory is `/var/www/drupalvm/drupal/web/data`).
+2. Copy the migrate_cdm and unlv_image directories to your modules directory.
+3. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
+4. Run the migration. E.g. `drush mim --all`.
+5. See a wonderful list of the newly migrated images on your Drupal site's front page!
