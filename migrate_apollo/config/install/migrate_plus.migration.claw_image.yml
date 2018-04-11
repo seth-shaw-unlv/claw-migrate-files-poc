@@ -15,22 +15,26 @@ source:
   plugin: csv
   path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
-  header_row_count: 0 # No headers, 1 if there are headers
+  header_row_count: 1 # headers, 0 if there are no headers
   keys:
     - digital_id
   constants:
     collection_alias: 'apollo'
-  column_names: # Based on Welcome Home, Howard
+  column_names:
     0:
       digital_id: 'Digital ID'
     1:
       title: 'Title'
     2:
-      description: 'Description'
+      date: 'Date' # Ignoring for now.
     3:
-      subject_person: 'Identified Individual'
+      location: 'Location' # Ignoring for now.
     4:
       subjects: 'Subjects'
+    5:
+      description: 'Description'
+    6:
+      file: 'File'
 
 destination: # We're creating nodes, ya'll.
   plugin: entity:node
@@ -53,29 +57,13 @@ process:
       - constants/collection_alias
       - digital_id
 
-  # SUBJECTS (similar to CREATORS above)
-  # Since subjects can be of multiple content types we need to perform
-  # lookups for each type, assign them to a temp array, and recombine
-  # them all before assigning them to the appropriate entity reference field.
+  # SUBJECTS
+  # For subjects we can't find in the system, we can't determine by their value
+  # if they should be persons, corporate, families, or topics. This defaults to
+  # creating them as subject nodes (topics). We may opt for NOT creating them
+  # and reporting out the issue at a later time, if that makes sense.
 
-  temp_subjects_person:  # Temporary array of person entity refs
-    -
-      plugin: skip_on_empty # Don't bother if there aren't any values
-      source: subject_person
-      method: process # Only this field, not the whole CSV row
-    - # Account for multiple entries in a cell delimited by ;
-      plugin: explode # Note: no whitespace trimming or quoting support is provided! Be careful with leading or trailing spaces between values in your source data!
-      delimiter: ';'
-    -
-      plugin: entity_generate
-      value_key: title
-      bundle_key: type
-      bundle: person
-      entity_type: node
-      default_values:
-        type: person
-
-  temp_subjects: # Temporary field of subjects
+  field_subjects: # Temporary field of subjects
     -
       plugin: skip_on_empty
       source: subjects
@@ -84,22 +72,9 @@ process:
       plugin: explode
       delimiter: ';'
     -
-      plugin: entity_generate
-      value_key: title
-      bundle: subject
-      bundle_key: type
-      entity_type: node
+      plugin: entity_generate # Create a subject entity if it doesn't already exist
       default_values:
         type: subject
-
-  field_subjects: # Gather temp arrays into the destination field
-    -
-      plugin: get
-      source:
-        - '@temp_subjects_person'
-        - '@temp_subjects'
-    -
-      plugin: flatten # an array of arrays to a flat array of entity refs
 
   # Now the TIFF entity references
   field_tiff/target_id:

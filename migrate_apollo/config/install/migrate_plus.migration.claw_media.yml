@@ -10,12 +10,12 @@ source:
   plugin: csv
   path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
-  header_row_count: 0 # No headers, 1 if there are headers
+  header_row_count: 1 # headers, 0 if there are no headers
   keys:
     - digital_id
   column_names:
     0:
-      digital_id: 'Digital ID' # basename of the file
+      digital_id: 'Digital ID' # identifier key
 
 process:
   mid:

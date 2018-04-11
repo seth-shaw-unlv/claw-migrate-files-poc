@@ -6,19 +6,20 @@ source:
   plugin: csv
   path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
-  header_row_count: 0 # No headers, 1 if there are headers
+  header_row_count: 1 # headers, 0 if there are no headers
   keys:
     - digital_id
   constants:
     source_base_dir: 'data/images'
     collection_alias: 'apollo'
     dest_base_dir: 'public://masters'
-    extension: 'tiff'
   column_names:
     0:
-      digital_id: 'Digital ID' # basename of the file
+      digital_id: 'Digital ID' # identifier key
     1:
       title: 'Title' # Used for title and alt-text
+    6:
+      file: 'File'
 
 
 process:
@@ -30,19 +31,12 @@ process:
     plugin: default_value
     default_value: image
 
-  filename:
-    plugin: concat
-    delimiter: '.'
-    source:
-      - digital_id
-      - constants/extension
-
-  source_full_path:
+  source_file_path:
     plugin: concat
     delimiter: /
     source:
       - constants/source_base_dir
-      - '@filename'
+      - file
 
   destination_file_path:
     plugin: concat
@@ -50,12 +44,12 @@ process:
     source:
       - constants/dest_base_dir
       - constants/collection_alias
-      - '@filename'
+      - file
 
   uri:
     plugin: file_copy
     source:
-      - '@source_full_path' #where it is
+      - '@source_file_path' #where it is
       - '@destination_file_path' #where we want it
 
 destination:
