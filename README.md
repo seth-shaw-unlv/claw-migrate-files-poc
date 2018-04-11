@@ -27,7 +27,7 @@ Note: using drush with migrate_tools is optional, but the instructions assume it
 
 Previously this example split out people that were subjects from topics that
 were subjects. In that case we could perform entity lookups on each column for
-the matching content type.
+the matching content type. To see this strategy use the [pre-mik branch](https://github.com/seth-shaw-unlv/claw-migrate-files-poc/tree/pre-mik).
 
 The [Move to Islandora Kit sample metadata](https://github.com/MarcusBarnes/mik/blob/master/tests/assets/csv/sample_metadata.csv),
 however, combines them into a single column. This requires us to perform a
