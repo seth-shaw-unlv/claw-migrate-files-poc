@@ -3,7 +3,7 @@
 **Content Model Overhaul in Process**
 
 I've updated unlv_image to work in parallel to the new islandora_object.
-Updating migrate_cdm is next.
+Migrate is almost ready, but migrations need to be done in Web interface for the files to work in claw-playbook. (Is the vagrant ssh user a member of www-data?)
 
 This repository consists of two modules:
 

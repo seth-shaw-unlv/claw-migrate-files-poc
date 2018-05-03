@@ -4,7 +4,6 @@ migration_group: test_digital
 
 migration_dependencies:
   required:
-    - claw_media
     # Loading authorities first allows us to look them up
     - auth_person
     - auth_complex
@@ -20,6 +19,7 @@ source:
     - digital_id
   constants:
     collection_alias: 'apollo'
+    image: 'Image'
   column_names:
     0:
       digital_id: 'Digital ID'
@@ -57,6 +57,14 @@ process:
       - constants/collection_alias
       - digital_id
 
+  # Type Tags
+  field_tags:
+    plugin: entity_lookup
+    source: constants/image
+    value_key: name
+    entity_type: taxonomy_term
+    ignore_case: true
+
   # SUBJECTS
   # For subjects we can't find in the system, we can't determine by their value
   # if they should be persons, corporate, families, or topics. This defaults to
@@ -75,11 +83,3 @@ process:
       plugin: entity_generate # Create a subject entity if it doesn't already exist
       default_values:
         type: subject
-
-  # Now the TIFF entity references
-  field_tiff/target_id:
-    plugin: migration_lookup
-    migration: claw_media
-    source: digital_id
-    no_stub: true
-  field_tiff/alt: title
