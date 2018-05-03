@@ -2,29 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tn
-    - media_entity.bundle.tn
+    - field.storage.node.field_tags
     - node.type.unlv_image
-  enforced:
-    module:
-      - unlv_image
-id: node.unlv_image.field_tn
-field_name: field_tn
+    - taxonomy.vocabulary.tags
+id: node.unlv_image.field_tags
+field_name: field_tags
 entity_type: node
 bundle: unlv_image
-label: TN
-description: 'Thumbnail image'
+label: Tags
+description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tn: tn
+      tags: tags
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

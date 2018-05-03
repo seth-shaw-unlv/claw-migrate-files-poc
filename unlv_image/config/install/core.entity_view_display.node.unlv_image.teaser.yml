@@ -3,13 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.unlv_image.field_creator
     - field.field.node.unlv_image.field_description
     - field.field.node.unlv_image.field_digital_id
-    - field.field.node.unlv_image.field_jp2
-    - field.field.node.unlv_image.field_web_content
-    - field.field.node.unlv_image.field_memberof
-    - field.field.node.unlv_image.field_tiff
-    - field.field.node.unlv_image.field_tn
+    - field.field.node.unlv_image.field_member_of
+    - field.field.node.unlv_image.field_subjects
     - node.type.unlv_image
   module:
     - user
@@ -36,22 +34,12 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-  field_tn:
-    type: entity_reference_entity_view
-    weight: 1
-    region: content
-    label: above
-    settings:
-      view_mode: content
-      link: false
-    third_party_settings: {  }
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_jp2: true
-  field_web_content: true
-  field_memberof: true
-  field_tiff: true
+  field_creator: true
+  field_member_of: true
+  field_subjects: true

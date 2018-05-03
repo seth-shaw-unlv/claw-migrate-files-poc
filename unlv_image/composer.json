@@ -7,8 +7,5 @@
   "keywords": ["Drupal", "Islandora"],
   "license": "GPL-2.0+",
   "require": {
-    "islandora/islandora_collection": "dev-8.x-1.x",
-    "islandora/islandora_image": "dev-8.x-1.x",
-    "drupal/media_entity_image": "^1.2"
   }
 }

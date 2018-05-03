@@ -2,18 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_memberof
-    - node.type.islandora_collection
+    - field.storage.node.field_member_of
+    - node.type.islandora_object
     - node.type.unlv_image
-  enforced:
-    module:
-      - unlv_image
-id: node.unlv_image.field_memberof
-field_name: field_memberof
+id: node.unlv_image.field_member_of
+field_name: field_member_of
 entity_type: node
 bundle: unlv_image
-label: 'Member Of'
-description: 'Parent collection'
+label: 'Member of'
+description: ''
 required: false
 translatable: true
 default_value: {  }
@@ -22,9 +19,11 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      islandora_collection: islandora_collection
+      islandora_object: islandora_object
+      unlv_image: unlv_image
     sort:
-      field: _none
+      field: title
+      direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: islandora_object
 field_type: entity_reference
