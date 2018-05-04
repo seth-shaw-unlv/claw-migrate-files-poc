@@ -1,0 +1,37 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ */
+function unlv_image_install() {
+
+  # Update the Islandora Configs
+  $config_factory = \Drupal::configFactory();
+
+  $repository_content_config = $config_factory->getEditable('context.context.repository_content');
+  $repository_content_config->set('conditions.node_type.bundles.unlv_image','unlv_image');
+  $repository_content_config->save(TRUE);
+  
+  $display_media_config = $config_factory->getEditable('views.view.display_media');
+  $media_displays = $display_media_config->get('display');
+  foreach ($media_displays as $display_name => $display) {
+    if(!empty($display['display_options']['bundles'])){
+      $media_display_bundles = $display['display_options']['bundles'];
+      $media_display_bundles[] = 'unlv_image';
+    }
+    $display_media_config->set("display.$display_name.display_options.bundles",$media_display_bundles);
+  }
+  $display_media_config->save(TRUE);
+
+  $openseadragon_media_config = $config_factory->getEditable('views.view.openseadragon_media_evas');
+  $openseadragon_displays = $openseadragon_media_config->get('display');
+  foreach ($openseadragon_displays as $display_name => $display) {
+    if(!empty($display['display_options']['bundles'])){
+      $media_display_bundles = $display['display_options']['bundles'];
+      $media_display_bundles[] = 'unlv_image';
+    }
+    $openseadragon_media_config->set("display.$display_name.display_options.bundles",$media_display_bundles);
+  }
+  $openseadragon_media_config->save(TRUE);
+}

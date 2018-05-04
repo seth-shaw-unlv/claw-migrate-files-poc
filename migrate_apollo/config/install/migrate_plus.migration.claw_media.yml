@@ -5,14 +5,17 @@ migration_group: test_digital
 migration_dependencies:
   required:
     - claw_file
+    - claw_image # so we can lookup the value for field_media_of
 
 source:
   plugin: csv
   path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
-  header_row_count: 1 # headers, 0 if there are no headers
+  header_row_count: 0 # 1 with headers, 0 if there are no headers
   keys:
     - digital_id
+  constants:
+    preservation_master: 'Preservation Master'
   column_names:
     0:
       digital_id: 'Digital ID' # identifier key
@@ -24,19 +27,36 @@ process:
     source: digital_id
     no_stub: true
 
-  field_file/target_id:
+  # Lookup the Tiff we just migrated
+  field_media_file/target_id:
     plugin: migration_lookup
     migration: claw_file
     source: digital_id
     no_stub: true
-
-  field_file/display:
+  field_media_file/display:
     plugin: default_value
     default_value: 1
-  field_file/description:
+  field_media_file/description:
     plugin: default_value
     default_value: ''
 
+  # Lookup the UNLV_Image we just created
+  field_media_of:
+    plugin: migration_lookup
+    migration: claw_image
+    source: digital_id
+    no_stub: true
+
+  # Set as Preservation Master
+  field_tags:
+    plugin: entity_lookup
+    source: constants/preservation_master
+    value_key: name
+    bundle_key: vid
+    bundle: tags
+    entity_type: taxonomy_term
+    ignore_case: true
+
 destination:
   plugin: 'entity:media'
-  default_bundle: image_tiff
+  default_bundle: file

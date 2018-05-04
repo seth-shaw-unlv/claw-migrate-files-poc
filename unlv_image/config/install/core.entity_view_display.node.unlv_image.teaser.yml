@@ -3,55 +3,50 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.unlv_image.field_creator
     - field.field.node.unlv_image.field_description
     - field.field.node.unlv_image.field_digital_id
-    - field.field.node.unlv_image.field_jp2
-    - field.field.node.unlv_image.field_web_content
-    - field.field.node.unlv_image.field_memberof
-    - field.field.node.unlv_image.field_tiff
-    - field.field.node.unlv_image.field_tn
+    - field.field.node.unlv_image.field_member_of
+    - field.field.node.unlv_image.field_subjects
+    - field.field.node.unlv_image.field_tags
     - node.type.unlv_image
-  module:
-    - user
   enforced:
     module:
       - unlv_image
+  module:
+    - user
 id: node.unlv_image.teaser
 targetEntityType: node
 bundle: unlv_image
 mode: teaser
 content:
-  field_digital_id:
-    type: string
-    weight: 5
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_description:
-    type: basic_string
-    weight: 2
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_tn:
-    type: entity_reference_entity_view
-    weight: 1
-    region: content
-    label: above
-    settings:
-      view_mode: content
-      link: false
-    third_party_settings: {  }
-  links:
+  display_media_thumbnail:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_description:
+    type: basic_string
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_digital_id:
+    type: string
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
-  field_jp2: true
-  field_web_content: true
-  field_memberof: true
-  field_tiff: true
+  display_media_entity_view_1: true
+  display_media_service_file: true
+  field_creator: true
+  field_member_of: true
+  field_subjects: true
+  field_tags: true
+  links: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
