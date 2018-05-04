@@ -21,6 +21,7 @@ Note: using drush with migrate_tools is optional, but the instructions assume it
 0. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
 0. Run the migration. E.g. `drush mim --all`. *Note: drush must be run by the webserver user because the claw_file migration copies files to the "public://directory". E.g.* `sudo -u www-data drush mim --all` *if you are using vagrant.*
 0. Generate service images. *Migrate is not triggering context actions. Until we figure out that problem you will need to do it yourself by going to the content page, selecting all the items you migrated, and then use the "Generate a service file from image preservation master". This will trigger both the service image and, as a chain reaction, the thumbnail generation.*
+0. Publish the newly migrated items. *By default this content type does not publish new items to make finding them in the previous step easier.*
 0. See a wonderful list of the newly migrated images on your Drupal site's front page!
 
 # Combining People and Subject entities in a single column
