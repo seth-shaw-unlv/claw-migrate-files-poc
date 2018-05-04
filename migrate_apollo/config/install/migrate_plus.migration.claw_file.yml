@@ -6,7 +6,7 @@ source:
   plugin: csv
   path: 'data/apollo.csv' # Path relative to Drupal site root
   delimiter: ','
-  header_row_count: 1 # headers, 0 if there are no headers
+  header_row_count: 0 # 1 with headers, 0 if there are no headers
   keys:
     - digital_id
   constants:

@@ -1,10 +1,5 @@
 # Proof of Concept: CLAW Migrate Files (Apollo Edition)
 
-**Content Model Overhaul in Process**
-
-I've updated unlv_image to work in parallel to the new islandora_object.
-Migrate is almost ready, but migrations need to be done in Web interface for the files to work in claw-playbook. (Is the vagrant ssh user a member of www-data?)
-
 This repository consists of two modules:
 
 1. unlv_image: A local implementation of the Islandora Image module to include additional metadata fields.
@@ -21,11 +16,12 @@ The source data used for this proof of concept came from the [Project Apollo Arc
 Note: using drush with migrate_tools is optional, but the instructions assume it is installed.
 
 0. Install the prerequisite modules (islandora_image, migrate_plus, and migrate_source_csv) and their dependencies. E.g. `composer require islandora/islandora_image drupal/migrate_tools:^4.0 drupal/migrate_source_csv`.
-2. Copy the data directory to your drupal web root (e.g. in my tests the drupal web root is `/var/www/drupalvm/drupal/web` and the data directory is `/var/www/drupalvm/drupal/web/data`).
-3. Copy the migrate_cdm and unlv_image directories to your modules directory.
-4. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
-5. Run the migration. E.g. `drush mim --all`.
-6. See a wonderful list of the newly migrated images on your Drupal site's front page!
+0. Copy the data directory to your drupal web root (e.g. in my tests the drupal web root is `/var/www/drupalvm/drupal/web` and the data directory is `/var/www/drupalvm/drupal/web/data`).
+0. Copy the migrate_cdm and unlv_image directories to your modules directory.
+0. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
+0. Run the migration. E.g. `drush mim --all`. *Note: drush must be run by the webserver user because the claw_file migration copies files to the "public://directory". E.g.* `sudo -u www-data drush mim --all` *if you are using vagrant.*
+0. Generate service images. *Migrate is not triggering context actions. Until we figure out that problem you will need to do it yourself by going to the content page, selecting all the items you migrated, and then use the "Generate a service file from image preservation master". This will trigger both the service image and, as a chain reaction, the thumbnail generation.*
+0. See a wonderful list of the newly migrated images on your Drupal site's front page!
 
 # Combining People and Subject entities in a single column
 
