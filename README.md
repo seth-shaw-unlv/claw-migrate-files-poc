@@ -3,7 +3,7 @@
 This repository consists of two modules:
 
 1. unlv_image: A local implementation of the Islandora Image module to include additional metadata fields.
-2. migrate_cdm: Uses the Migrate API to load Tiff masters, metadata from a CSV (patterned after the [Move to Islandora Kit sample metadata CSV](https://github.com/MarcusBarnes/mik/blob/master/tests/assets/csv/sample_metadata.csv)), and MADS authority records from the Library of Congress.
+2. migrate_cdm: Uses the Migrate API to load Tiff masters, metadata from a CSV, and MADS authority records from the Library of Congress.
 
 *Note:* This proof-of-concept assumes that new content types will be created for each metadata profile/object type pair; ergo, this proof-of-concept includes a new content type called UNLV_image which parallel's islandora_image but adds some node entity references. However, CLAW is under active development which will cause this example to break from time to time. I intend to continue updating this example as the current dev-version of CLAW develops.
 
@@ -20,7 +20,7 @@ Note: using drush with migrate_tools is optional, but the instructions assume it
 0. Copy the migrate_cdm and unlv_image directories to your modules directory.
 0. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
 0. Run the migration. E.g. `drush -l http://localhost:8000 mim --all`. *Note: drush must be run by the webserver user because the claw_file migration copies files to the "public://directory". E.g.* `sudo -u www-data drush -l http://localhost:8000 mim --all` *if you are using vagrant.*
-0. Generate service images. *Migrate is not triggering context actions. Until we figure out that problem you will need to do it yourself by going to the content page, selecting all the items you migrated, and then use the "Generate a service file from image preservation master". This will trigger both the service image and, as a chain reaction, the thumbnail generation.*
+0. Generate service images. *Still addressing issues with service file generation. Until we figure out that problem you will need to do it yourself by going to the content page, selecting all the items you migrated, and then use the "Generate a service file from image preservation master". This will trigger both the service image and, as a chain reaction, the thumbnail generation.*
 0. See a wonderful list of the newly migrated images on your Drupal site's front page!
 
 # Combining People and Subject entities in a single column
