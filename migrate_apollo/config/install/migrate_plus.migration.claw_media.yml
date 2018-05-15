@@ -16,6 +16,7 @@ source:
     - digital_id
   constants:
     preservation_master: 'Preservation Master'
+    uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
   column_names:
     0:
       digital_id: 'Digital ID' # identifier key
@@ -26,6 +27,8 @@ process:
     migration: claw_file
     source: digital_id
     no_stub: true
+
+  uid: constants/uid
 
   # Lookup the Tiff we just migrated
   field_media_file/target_id:
