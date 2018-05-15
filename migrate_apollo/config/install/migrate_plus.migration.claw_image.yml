@@ -20,6 +20,7 @@ source:
   constants:
     collection_alias: 'apollo'
     image: 'Image'
+    uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
   column_names:
     0:
       digital_id: 'Digital ID'
@@ -41,6 +42,7 @@ process:
     default_value: unlv_image
 
   # One-to-One mappings
+  uid: constants/uid
   field_digital_id: digital_id
   title: title
   field_description: description

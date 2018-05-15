@@ -19,8 +19,7 @@ Note: using drush with migrate_tools is optional, but the instructions assume it
 0. Copy the data directory to your drupal web root (e.g. in my tests the drupal web root is `/var/www/drupalvm/drupal/web` and the data directory is `/var/www/drupalvm/drupal/web/data`).
 0. Copy the migrate_cdm and unlv_image directories to your modules directory.
 0. Enable the modules. E.g. `drush en -y migrate_tools migrate_apollo`.
-0. Run the migration. E.g. `drush -l http://localhost:8000 mim --all`. *Note: drush must be run by the webserver user because the claw_file migration copies files to the "public://directory". E.g.* `sudo -u www-data drush -l http://localhost:8000 mim --all` *if you are using vagrant.*
-0. Generate service images. *Still addressing issues with service file generation. Until we figure out that problem you will need to do it yourself by going to the content page, selecting all the items you migrated, and then use the "Generate a service file from image preservation master". This will trigger both the service image and, as a chain reaction, the thumbnail generation.*
+0. Run the migration. E.g. `drush -l http://localhost:8000 mim --userid=1 --all`. *Note: drush must be run by the webserver user because the claw_file migration copies files to the "public://directory". E.g.* `sudo -u www-data drush -l http://localhost:8000 mim --userid=1 --all` *if you are using vagrant. Also, the userid flag is specific to the migrate:import command, it provides the necessary user information to the JWT authentication to enable derivatives.*
 0. See a wonderful list of the newly migrated images on your Drupal site's front page!
 
 # Combining People and Subject entities in a single column

@@ -1,0 +1,5 @@
+services:
+  migrate_apollo.commands:
+    class: \Drupal\migrate_apollo\Commands\MigrateApolloCommands
+    tags:
+      - { name: drush.command }
