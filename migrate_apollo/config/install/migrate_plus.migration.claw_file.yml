@@ -1,3 +1,4 @@
+uuid: 98014998-7099-496d-8387-4136fc85de7f
 id: claw_file
 label: Import Image Files
 migration_group: test_digital
@@ -12,7 +13,7 @@ source:
   constants:
     source_base_dir: 'data/images'
     collection_alias: 'apollo'
-    dest_base_dir: 'public://masters'
+    dest_base_dir: 'fedora://masters'
     extension: 'tiff'
   column_names:
     0:
