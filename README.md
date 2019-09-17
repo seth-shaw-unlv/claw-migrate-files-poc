@@ -2,7 +2,7 @@
 
 This repository consists of two modules:
 
-1. migrate_cdm: Uses the Migrate API to load Tiff masters, metadata from a CSV, and MADS authority records from the Library of Congress.
+1. migrate_apollo: Uses the Migrate API to load Tiff masters, metadata from a CSV, and MADS RDF XML authority records from the Library of Congress.
 2. data: the source data we will migrate (see below).
 
 # Source Data
