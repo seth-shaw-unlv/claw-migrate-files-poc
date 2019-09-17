@@ -1,0 +1,62 @@
+id: islandora8_file
+label: Import Image Files
+migration_group: apollo
+
+source:
+  plugin: csv
+  path: 'data/apollo.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # 1 with headers, 0 if there are no headers
+  keys:
+    - digital_id
+  constants:
+    source_base_dir: 'data/images'
+    collection_alias: 'apollo'
+    dest_base_dir: 'fedora://masters'
+    extension: 'tiff'
+  column_names:
+    0:
+      digital_id: 'Digital ID' # identifier key and basename of the file
+    1:
+      title: 'Title' # Used for title and alt-text
+
+
+process:
+  settings:
+    plugin: skip_row_if_not_set
+    source: digital_id
+
+  type:
+    plugin: default_value
+    default_value: image
+
+  filename:
+    plugin: concat
+    delimiter: '.'
+    source:
+      - digital_id
+      - constants/extension
+
+  source_file_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/source_base_dir
+      - '@filename'
+
+  destination_file_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/dest_base_dir
+      - constants/collection_alias
+      - '@filename'
+
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_file_path' #where it is
+      - '@destination_file_path' #where we want it
+
+destination:
+  plugin: 'entity:file'

@@ -1,0 +1,40 @@
+id: auth_topic
+label: Import MADS Topic Authorities
+migration_group: authorities
+
+source:
+  plugin: url
+  constants:
+    source: lcsh
+  data_fetcher_plugin: file
+  data_parser_plugin: xml
+  urls: 'data/apollo-auths.rdf' # Path relative to Drupal site root
+  item_selector: /rdf:RDF/madsrdf:Topic
+  fields:
+    -
+      name: uri
+      label: 'URI'
+      selector: '@rdf:about'
+    -
+      name: pref_label
+      label: 'MADS Auth Label'
+      selector: 'madsrdf:authoritativeLabel'
+    -
+      name: ref_uri
+      label: "External Authority"
+      selector: 'skos:exactMatch/@rdf:resource'
+
+  ids:
+    uri:
+      type: string
+
+destination:
+  plugin: entity:taxonomy_term
+
+process:
+  vid:
+    plugin: default_value
+    default_value: subject
+  name: pref_label
+  field_authority_link/uri: uri
+  field_authority_link/source: constants/source

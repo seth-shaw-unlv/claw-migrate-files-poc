@@ -1,0 +1,65 @@
+id: islandora8_media
+label: Import Media
+migration_group: apollo
+
+migration_dependencies:
+  required:
+    - islandora8_files
+    - islandora8_metadata # so we can lookup the value for field_media_of
+
+source:
+  plugin: csv
+  path: 'data/apollo.csv' # Path relative to Drupal site root
+  delimiter: ','
+  header_row_count: 0 # 1 with headers, 0 if there are no headers
+  keys:
+    - digital_id
+  constants:
+    media_use: 'Original File'
+    uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
+  column_names:
+    0:
+      digital_id: 'Digital ID' # identifier key
+
+process:
+  mid:
+    plugin: migration_lookup
+    migration: claw_file
+    source: digital_id
+    no_stub: true
+
+  uid: constants/uid
+
+  # Lookup the Tiff we just migrated
+  field_media_file/target_id:
+    plugin: migration_lookup
+    migration: islandora8_file
+    source: digital_id
+    no_stub: true
+  field_media_file/display:
+    plugin: default_value
+    default_value: 1
+  field_media_file/description:
+    plugin: default_value
+    default_value: ''
+
+  # Lookup the metadata record we just created
+  field_media_of:
+    plugin: migration_lookup
+    migration: islandora8_metadata
+    source: digital_id
+    no_stub: true
+
+  # Set as Preservation Master
+  field_media_use:
+    plugin: entity_lookup
+    source: constants/media_use
+    value_key: name
+    bundle_key: vid
+    bundle: islandora_media_use
+    entity_type: taxonomy_term
+    ignore_case: true
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: file

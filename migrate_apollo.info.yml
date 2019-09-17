@@ -1,0 +1,11 @@
+name: 'Migrate Islandora CLAW Images: Apollo Demo'
+description: Migrates Master Tiff Images into an Islandora Claw Image derivative using Apollo 11 mission photos as an example.
+package: custom
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_source_csv
+  - islandora_defaults
