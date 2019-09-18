@@ -1,11 +1,11 @@
-id: claw_media
-label: Import CDM Image Media
-migration_group: test_digital
+id: islandora8_media
+label: Import Media
+migration_group: apollo
 
 migration_dependencies:
   required:
-    - claw_file
-    - claw_image # so we can lookup the value for field_media_of
+    - islandora8_files
+    - islandora8_metadata # so we can lookup the value for field_media_of
 
 source:
   plugin: csv
@@ -15,7 +15,7 @@ source:
   keys:
     - digital_id
   constants:
-    preservation_master: 'Preservation Master'
+    media_use: 'Original File'
     uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
   column_names:
     0:
@@ -33,7 +33,7 @@ process:
   # Lookup the Tiff we just migrated
   field_media_file/target_id:
     plugin: migration_lookup
-    migration: claw_file
+    migration: islandora8_file
     source: digital_id
     no_stub: true
   field_media_file/display:
@@ -43,20 +43,20 @@ process:
     plugin: default_value
     default_value: ''
 
-  # Lookup the UNLV_Image we just created
+  # Lookup the metadata record we just created
   field_media_of:
     plugin: migration_lookup
-    migration: claw_image
+    migration: islandora8_metadata
     source: digital_id
     no_stub: true
 
   # Set as Preservation Master
-  field_tags:
+  field_media_use:
     plugin: entity_lookup
-    source: constants/preservation_master
+    source: constants/media_use
     value_key: name
     bundle_key: vid
-    bundle: tags
+    bundle: islandora_media_use
     entity_type: taxonomy_term
     ignore_case: true
 

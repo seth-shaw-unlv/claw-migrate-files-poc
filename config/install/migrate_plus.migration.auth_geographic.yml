@@ -4,6 +4,8 @@ migration_group: authorities
 
 source:
   plugin: url
+  constants:
+    source: lcnaf
   data_fetcher_plugin: file
   data_parser_plugin: xml
   urls: 'data/apollo-auths.rdf' # Path relative to Drupal site root
@@ -27,15 +29,29 @@ source:
       type: string
 
 destination:
-  plugin: entity:node
+  plugin: entity:taxonomy_term
 
 process:
-  type:
+  vid:
     plugin: default_value
-    default_value: subject
-  title: pref_label
-  field_uris:
-    - # Skip this field if there are no skos:exactMatch
-      plugin: skip_on_empty
-      method: process
-      source: ref_uri
+    default_value: geo_location
+  name: pref_label
+  temp_authority_source:
+    plugin: str_replace
+    regex: true
+    source: uri
+    search: '#http://id\.loc\.gov/authorities/(\w+)/.*#'
+    replace: "$1"
+  field_authority_link/uri: uri
+  field_authority_link/source:
+    plugin: static_map
+    source: '@temp_authority_source'
+    map:
+      names: lcnaf
+      subjects: lcsh
+  field_authority_link/title:
+    plugin: static_map
+    source: '@temp_authority_source'
+    map:
+      names: 'Library of Congress Name Authority File'
+      subjects: 'Library of Congress Subject Headings'

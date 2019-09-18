@@ -1,7 +1,0 @@
-name: unlv_image
-type: module
-description: UNLV Image
-core: 8.x
-package: unlv
-dependencies:
-  - islandora_image

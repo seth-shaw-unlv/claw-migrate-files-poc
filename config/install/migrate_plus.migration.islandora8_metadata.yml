@@ -1,6 +1,6 @@
-id: claw_image
-label: Import CDM Images
-migration_group: test_digital
+id: islandora8_metadata
+label: 'Import Metadata'
+migration_group: apollo
 
 migration_dependencies:
   required:
@@ -22,15 +22,15 @@ source:
     image: 'Image'
     uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
   column_names:
-    0:
+    -
       digital_id: 'Digital ID'
-    1:
+    -
       title: 'Title'
-    2:
+    -
       description: 'Description'
-    3:
+    -
       subject_person: 'Identified Individual'
-    4:
+    -
       subjects: 'Subjects'
 
 destination: # We're creating nodes, ya'll.
@@ -39,11 +39,11 @@ destination: # We're creating nodes, ya'll.
 process:
   type: # The content type of the nodes we are creating
     plugin: default_value
-    default_value: unlv_image
+    default_value: islandora_object
 
   # One-to-One mappings
   uid: constants/uid
-  field_digital_id: digital_id
+  field_identifier: digital_id
   title: title
   field_description: description
 
@@ -56,17 +56,17 @@ process:
       - digital_id
 
   # Type Tags
-  field_tags:
+  field_model:
     plugin: entity_lookup
     source: constants/image
     value_key: name
     bundle_key: vid
-    bundle: tags
+    bundle: islandora_models
     entity_type: taxonomy_term
     ignore_case: true
 
 # SUBJECTS
-  # Since subjects can be of multiple content types we need to perform
+  # Since subjects can be in multiple vocabularies we need to perform
   # lookups for each type, assign them to a temp array, and recombine
   # them all before assigning them to the appropriate entity reference field.
 
@@ -80,12 +80,12 @@ process:
       delimiter: ';'
     -
       plugin: entity_generate
-      value_key: title
-      bundle_key: type
+      value_key: name
+      bundle_key: vid
       bundle: person
-      entity_type: node
+      entity_type: taxonomy_term
       default_values:
-        type: person
+        vid: person
 
   temp_subjects: # Temporary field of subjects
     -
@@ -97,12 +97,12 @@ process:
       delimiter: ';'
     -
       plugin: entity_generate
-      value_key: title
+      value_key: name
       bundle: subject
-      bundle_key: type
-      entity_type: node
+      bundle_key: vid
+      entity_type: taxonomy_term
       default_values:
-        type: subject
+        vid: subject
 
   field_subjects: # Gather temp arrays into the destination field
     -

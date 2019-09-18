@@ -1,13 +1,15 @@
-id: auth_person
-label: Import MADS PersonalName Authorities
+id: auth_complex
+label: Import MADS ComplexSubject Authorities
 migration_group: authorities
 
 source:
   plugin: url
+  constants:
+    source: lcsh
   data_fetcher_plugin: file
   data_parser_plugin: xml
   urls: 'data/apollo-auths.rdf' # Path relative to Drupal site root
-  item_selector: /rdf:RDF/madsrdf:PersonalName
+  item_selector: /rdf:RDF/madsrdf:ComplexSubject
   fields:
     -
       name: uri
@@ -27,15 +29,12 @@ source:
       type: string
 
 destination:
-  plugin: entity:node
+  plugin: entity:taxonomy_term
 
 process:
-  type:
+  vid:
     plugin: default_value
-    default_value: person
-  title: pref_label
-  field_uris:
-    - # Skip this field if there are no skos:exactMatch
-      plugin: skip_on_empty
-      method: process
-      source: ref_uri
+    default_value: subject
+  name: pref_label
+  field_authority_link/uri: uri
+  field_authority_link/source: constants/source 
