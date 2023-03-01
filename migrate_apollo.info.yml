@@ -3,9 +3,10 @@ description: Migrates Master Tiff Images into an Islandora Claw Image derivative
 package: custom
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
 
 dependencies:
   - drupal:migrate
   - migrate_plus:migrate_plus
   - migrate_source_csv
-  - islandora_defaults
+  - islandora:islandora
