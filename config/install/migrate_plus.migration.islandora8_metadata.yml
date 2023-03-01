@@ -1,61 +1,55 @@
+langcode: en
+status: true
+dependencies: {  }
 id: islandora8_metadata
-label: 'Import Metadata'
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: apollo
-
-migration_dependencies:
-  required:
-    # Loading authorities first allows us to look them up
-    - auth_person
-    - auth_complex
-    - auth_geographic
-    - auth_topic
-
+label: 'Import Metadata'
 source:
   plugin: csv
-  path: 'data/apollo.csv' # Path relative to Drupal site root
+  path: data/apollo.csv # Path relative to Drupal site root
   delimiter: ','
   header_row_count: 0 # 1 with headers, 0 if there are no headers
-  keys:
+  ids:
     - digital_id
   constants:
-    collection_alias: 'apollo'
-    image: 'Image'
-    uid: 1 # UID of Admin user, may be changed to uid of someone with permission to create items
-  column_names:
+    collection_alias: apollo
+    image: Image
+    uid: 1
+  fields:
     -
-      digital_id: 'Digital ID'
+      name: digital_id
+      label: 'Digital ID'
     -
-      title: 'Title'
+      name: title
+      label: Title
     -
-      description: 'Description'
+      name: description
+      label: Description
     -
-      subject_person: 'Identified Individual'
+      name: subject_person
+      label: 'Identified Individual'
     -
-      subjects: 'Subjects'
-
-destination: # We're creating nodes, ya'll.
-  plugin: entity:node
-
+      name: subjects
+      label: Subjects
 process:
   type: # The content type of the nodes we are creating
     plugin: default_value
     default_value: islandora_object
-
-  # One-to-One mappings
   uid: constants/uid
   field_identifier: digital_id
   title: title
   field_description: description
-
   path: # Path Alias
     plugin: concat
-    delimiter: '/'
+    delimiter: /
     source:
       - '' # Gives us a '/' prefix for the server root
       - constants/collection_alias
       - digital_id
-
-  # Type Tags
   field_model:
     plugin: entity_lookup
     source: constants/image
@@ -70,14 +64,17 @@ process:
   # lookups for each type, assign them to a temp array, and recombine
   # them all before assigning them to the appropriate entity reference field.
 
-  temp_subjects_person:  # Temporary array of person entity refs
+  temp_subjects_person: # Temporary array of person entity refs
     -
       plugin: skip_on_empty # Don't bother if there aren't any values
       source: subject_person
-      method: process # Only this field, not the whole CSV row
+      method: process # Skip only this field, not the whole CSV row
     - # Account for multiple entries in a cell delimited by ;
-      plugin: explode # Note: no whitespace trimming or quoting support is provided! Be careful with leading or trailing spaces between values in your source data!
-      delimiter: ';'
+      plugin: explode
+      delimiter: ;
+    - # Note: explode doesn't trim whitespace, so we'll do it here.
+      plugin: callback
+      callable: trim
     -
       plugin: entity_generate
       value_key: name
@@ -86,7 +83,6 @@ process:
       entity_type: taxonomy_term
       default_values:
         vid: person
-
   temp_subjects: # Temporary field of subjects
     -
       plugin: skip_on_empty
@@ -94,7 +90,7 @@ process:
       method: process
     -
       plugin: explode
-      delimiter: ';'
+      delimiter: ;
     -
       plugin: entity_generate
       value_key: name
@@ -103,7 +99,6 @@ process:
       entity_type: taxonomy_term
       default_values:
         vid: subject
-
   field_subjects: # Gather temp arrays into the destination field
     -
       plugin: get
@@ -112,3 +107,14 @@ process:
         - '@temp_subjects'
     -
       plugin: flatten # an array of arrays to a flat array of entity refs
+
+destination: # We're creating nodes, ya'll.
+  plugin: 'entity:node'
+
+migration_dependencies:
+  required:
+    # Loading authorities first allows us to look them up
+    - auth_person
+    - auth_complex
+    - auth_geographic
+    - auth_topic
